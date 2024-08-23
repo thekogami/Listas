@@ -13,7 +13,7 @@ public class Program {
 
       switch (op) {
         case 1: {
-          System.out.println("Digite o valor a ser inserido no início da lista");
+          System.out.println("Digite o valor a ser inserido no início da lista: ");
           Double value = sc.nextDouble(); // le o numero informado
           list.addInitial(value);
           break;
@@ -55,7 +55,7 @@ public class Program {
           break;
         }
         default: {
-          System.out.println("Opção inválida");
+          System.out.println("Opção inválida!");
         }
       }
     } while (op != 10);
@@ -74,6 +74,7 @@ public class Program {
     System.out.println("8 - Remover do final da lista");
     System.out.println("9 - Remover de qualquer posição");
     System.out.println("10 - Sair");
+    System.out.println("Digite a opção desejada: ");
   }
 
 }

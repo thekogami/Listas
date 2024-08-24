@@ -20,14 +20,23 @@ public class Program {
         }
         case 2: {
           System.out.println("Entrei na opção 2");
+          System.out.println("Digite o valor a ser inserido no final da lista: ");
+          Double value = sc.nextDouble(); // le o numero informado1
+          list.addFinal(value);
           break;
         }
         case 3: {
           System.out.println("Entrei na opção 3");
+          System.out.println("Digite a posição a ser inserido na lista: ");
+          int position = sc.nextInt();
+          System.out.println("Digite o valor a ser inserido na lista: ");
+          Double value = sc.nextDouble(); // le o numero informado
+          list.addPosition(position, value);
           break;
         }
         case 4: {
           System.out.println("Entrei na opção 4");
+          System.out.println("Quantidade de nós: " + list.size());
           break;
         }
         case 5: {

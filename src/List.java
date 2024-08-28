@@ -57,6 +57,65 @@ public class List {
     return count;
   }
 
+  public int search(Double value) {
+    // 6 - Pesquisar um nó ou uma posição específica
+    Node aux = head;
+    int count = 0;
+    while (aux != null) {
+      if (aux.getValue().equals(value)) {
+        return count;
+      }
+      count++;
+      aux = aux.getNext();
+    }
+    return -1;
+  }
+
+  public void removeInitial() {
+    // 7 - Remover do início da lista
+    if (head != null) {
+      head = head.getNext();
+    }
+  }
+
+  public void removeFinal() {
+    // 8 - Remover do final da lista
+    if (head == null) {
+      return;
+    }
+    if (head.getNext() == null) {
+      head = null;
+      return;
+    }
+    Node aux = head;
+    while (aux.getNext().getNext() != null) {
+      aux = aux.getNext();
+    }
+    aux.setNext(null);
+  }
+
+  public void removePosition(int position) {
+    // 9 - Remover de uma posição específica
+    if (position == 0) {
+      removeInitial();
+    } else {
+      Node aux = head;
+      for (int i = 0; i < position - 1; i++) {
+        if (aux == null) {
+          return;
+        }
+        aux = aux.getNext();
+      }
+      if (aux == null) {
+        return;
+      }
+      if (aux.getNext() == null) {
+        return;
+      }
+      aux.setNext(aux.getNext().getNext());
+    }
+  }
+
   @Override
   public String toString() {
 

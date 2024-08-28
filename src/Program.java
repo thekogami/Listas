@@ -21,7 +21,7 @@ public class Program {
         case 2: {
           System.out.println("Entrei na opção 2");
           System.out.println("Digite o valor a ser inserido no final da lista: ");
-          Double value = sc.nextDouble(); // le o numero informado1
+          Double value = sc.nextDouble(); // le o numero informado
           list.addFinal(value);
           break;
         }
@@ -45,22 +45,32 @@ public class Program {
         }
         case 6: {
           System.out.println("Entrei na opção 6");
+          System.out.println("Digite o valor a ser pesquisado: ");
+          Double value = sc.nextDouble(); // le o numero informado
+          System.out.println("O valor " + value + " está na posição " + list.search(value));
           break;
         }
         case 7: {
           System.out.println("Entrei na opção 7");
+          System.out.println("Removendo do início da lista");
+          list.removeInitial();
           break;
         }
         case 8: {
           System.out.println("Entrei na opção 8");
+          System.out.println("Removendo do final da lista");
+          list.removeFinal();
           break;
         }
         case 9: {
           System.out.println("Entrei na opção 9");
+          System.out.println("Digite a posição a ser removida: ");
+          int position = sc.nextInt();
+          list.removePosition(position);
           break;
         }
         case 10: {
-          System.out.println("Entrei na opção 10");
+          System.out.println("Saindo...");
           break;
         }
         default: {
